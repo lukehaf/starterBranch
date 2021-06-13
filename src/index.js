@@ -3,9 +3,12 @@ import $ from 'jquery';
 
 import './style.scss';
 
-let x = 2;
-function display() {
-  $('#main').html(`You've been on this page for ${x} seconds! Keep it up, go for a record...`);
-  x += 1;
-}
-setInterval(display, 1000);
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './style.scss';
+
+const App = () => <div className="test">All the REACT are belong to us!</div>;
+
+ReactDOM.render(<App />, document.getElementById('main'));
+
+
