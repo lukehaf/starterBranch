@@ -1,4 +1,4 @@
-import '../style.scss';
+import './style.scss';
 
 import React from 'react';
 
@@ -6,8 +6,7 @@ import {
   BrowserRouter as Router, Route, NavLink, Switch,
 } from 'react-router-dom';
 
-import Counter from '../counter';
-import Controls from './controls';
+import Counter from './features/counter/Counter';
 
 const Nav = (props) => {
   return (
@@ -22,17 +21,16 @@ const Nav = (props) => {
   );
 };
 
-const Welcome = (props) => {
+const Welcome = () => {
   return (
     <div>
       <div>Welcome</div>
       <Counter />
-      <Controls />
     </div>
   );
 };
 
-const About = (props) => {
+const About = () => {
   return <div> All there is to know about me </div>;
 };
 
@@ -40,11 +38,11 @@ const Test = (props) => {
   return <div> ID: {props.match.params.id} </div>;
 }; // the match prop is given to us by react router for every path
 
-const FallBack = (props) => {
+const FallBack = () => {
   return <div>URL Not Found</div>;
 };
 
-const App = (props) => {
+const App = () => {
   return (
     <Router>
       <div>
